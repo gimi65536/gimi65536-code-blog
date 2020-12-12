@@ -78,7 +78,7 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-	margin: 0;
+	margin: 0 auto;
 }
 
 /**
@@ -93,8 +93,8 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+	font-size: 2rem;
+	margin: 0.33rem 0;
 }
 
 /* Grouping content
@@ -116,7 +116,7 @@ hr {
  */
 pre {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /* Text-level semantics
@@ -155,7 +155,7 @@ code,
 kbd,
 samp {
 	font-family: monospace, monospace;
-	font-size: 1em;
+	font-size: 1rem;
 }
 
 /**
@@ -178,11 +178,11 @@ sup {
 }
 
 sub {
-	bottom: -0.25em;
+	bottom: -0.25rem;
 }
 
 sup {
-	top: -0.5em;
+	top: -0.5rem;
 }
 
 /* Embedded content
@@ -266,7 +266,7 @@ button:-moz-focusring,
  * Correct the padding in Firefox.
  */
 fieldset {
-	padding: 0.35em 0.75em 0.625em;
+	padding: 0.35rem 0.75rem 0.625rem;
 }
 
 /**
@@ -418,7 +418,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 }
 
 dfn,
@@ -429,21 +429,21 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
+	margin: 0 1.5rem;
 }
 
 address {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }
 
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
+	margin-bottom: 1.6rem;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.6rem;
 }
 
 code,
@@ -479,12 +479,12 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 }
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5rem 3rem;
 }
 
 ul {
@@ -498,7 +498,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1.5rem;
 }
 
 dt {
@@ -506,7 +506,7 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 1.5rem 1.5rem;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -522,11 +522,11 @@ img {
 }
 
 figure {
-	margin: 1em 0;
+	margin: 1rem 0;
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 	width: 100%;
 }
 
@@ -555,6 +555,15 @@ a:active {
 	outline: 0;
 }
 
+h1 a {
+	text-decoration: none;
+}
+
+h1 a:visited {
+	/* set the color to default */
+	color: #4169e1;
+}
+
 /* Forms
 --------------------------------------------- */
 button,
@@ -567,7 +576,7 @@ input[type="submit"] {
 	background: #e6e6e6;
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 0.6rem 1rem 0.4rem;
 }
 
 button:hover,
@@ -641,15 +650,75 @@ textarea {
 # Layouts
 --------------------------------------------------------------*/
 
+/* general
+--------------------------------------------- */
+.site {
+	display: grid;
+	grid-template:
+		"header header header header"
+		"unused-l main aside unused-r"
+		"footer footer footer footer"
+		/ 1fr auto auto 1fr;
+}
+
+.site header {
+	grid-area: header;
+}
+
+.site main {
+	grid-area: main;
+}
+
+.site aside {
+	grid-area: aside;
+}
+
+.site footer {
+	grid-area: footer;
+}
+
+/* header
+--------------------------------------------- */
+.site-header {
+	display: flex;
+	justify-content: space-between;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
+
+/* header
+--------------------------------------------- */
+.site-header {
+	background-color: #fff;
+	box-shadow: 0 3px 10px #77777730;
+	position: sticky;
+	top: 0;
+	z-index: 726;
+}
+
+.site-header p {
+	margin: 1rem 0;
+}
+
+.site-title a,
+.site-title a:visited {
+	color: #666;
+}
 
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
 	display: block;
-	width: 100%;
+}
+
+.menu-navmenu-container,
+.main-navigation ul,
+.main-navigation li,
+.main-navigation a {
+	/* auto detect the height expanded by .site-header */
+	height: 100%;
 }
 
 .main-navigation ul {
@@ -664,12 +733,12 @@ textarea {
 	float: left;
 	position: absolute;
 	top: 100%;
-	left: -999em;
+	left: -999rem;
 	z-index: 99999;
 }
 
 .main-navigation ul ul ul {
-	left: -999em;
+	left: -999rem;
 	top: 0;
 }
 
@@ -689,12 +758,33 @@ textarea {
 }
 
 .main-navigation li {
+	display: block;
 	position: relative;
+	width: 125px;
+}
+
+.main-navigation li:hover {
+	background-color: #ffffff30;
 }
 
 .main-navigation a {
-	display: block;
 	text-decoration: none;
+	width: 100%;
+	/* verical center text */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* font size */
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: rgb(40, 41, 46);
+	transition: all .4s;
+}
+
+.main-navigation a:hover {
+	color: #f09a75;
+	transition: all .4s;
 }
 
 /* Small menu. */
@@ -703,7 +793,7 @@ textarea {
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 37.5rem) {
 
 	.menu-toggle {
 		display: none;
@@ -719,7 +809,7 @@ textarea {
 .posts-navigation,
 .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }
 
 .comment-navigation .nav-links,
@@ -743,13 +833,48 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
+.site-main {
+	padding: 0 30px;
+}
+
 .sticky {
 	display: block;
 }
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
+}
+
+.post .entry-header {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.post .entry-header a {
+	color: inherit;
+}
+
+.post .entry-header .entry-title a {
+	text-decoration: none;
+}
+
+.post .entry-header .entry-meta {
+	display: flex;
+}
+
+.post .entry-header .entry-meta::before,
+.post .entry-header .entry-meta::after {
+	content: "";
+	flex: 1 1;
+	width: 30px;
+	border-bottom: 1px solid #aaa;
+	margin: auto 10px;
+}
+
+.byline {
+	display: none;
 }
 
 .updated:not(.published) {
@@ -759,12 +884,31 @@ textarea {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: 1.5rem 0 0;
 }
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
+}
+
+.post .entry-footer {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.post .entry-footer a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.post .entry-footer .edit-link a {
+	text-decoration: underline;
+}
+
+.post .entry-footer > span:nth-child(n+2)::before {
+	content: "/";
+	margin: 0 3px;
 }
 
 /* Comments
@@ -779,12 +923,44 @@ textarea {
 
 /* Widgets
 --------------------------------------------- */
+.widget-area {
+	background-color: #e0e0e0;
+	padding: 0 30px;
+}
+
+/* unused-r */
+.site::after {
+	content: "";
+	grid-area: unused-r;
+	background-color: #e0e0e0;
+}
+
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5rem;
 }
 
 .widget select {
 	max-width: 100%;
+}
+
+/* Footer
+--------------------------------------------- */
+.site-footer {
+	display: flex;
+	height: 70px;
+	background-color: rgb(23, 26, 29);
+	justify-content: center;
+	align-items: center;
+}
+
+.site-info {
+	text-align: center;
+	color: white;
+}
+
+.site-footer a {
+	text-decoration: none;
+	color: rgb(134, 247, 255);
 }
 
 /* Media
@@ -806,7 +982,7 @@ textarea {
 /* Captions
 --------------------------------------------- */
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 	max-width: 100%;
 }
 
@@ -817,7 +993,7 @@ textarea {
 }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
+	margin: 0.8075rem 0;
 }
 
 .wp-caption-text {
@@ -827,9 +1003,9 @@ textarea {
 /* Galleries
 --------------------------------------------- */
 .gallery {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 	display: grid;
-	grid-gap: 1.5em;
+	grid-gap: 1.5rem;
 }
 
 .gallery-item {
@@ -946,8 +1122,8 @@ textarea {
 	float: left;
 
 	/*rtl:ignore*/
-	margin-right: 1.5em;
-	margin-bottom: 1.5em;
+	margin-right: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .alignright {
@@ -956,8 +1132,8 @@ textarea {
 	float: right;
 
 	/*rtl:ignore*/
-	margin-left: 1.5em;
-	margin-bottom: 1.5em;
+	margin-left: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
 .aligncenter {
@@ -965,5 +1141,5 @@ textarea {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5rem;
 }
