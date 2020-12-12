@@ -690,7 +690,7 @@ textarea {
 
 /* admin
 --------------------------------------------- */
-.wpadminbar {
+#wpadminbar {
 	z-index: 720;
 }
 
