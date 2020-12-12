@@ -661,19 +661,19 @@ textarea {
 		/ 1fr auto auto 1fr;
 }
 
-.site header {
+.site > header {
 	grid-area: header;
 }
 
-.site main {
+.site > main {
 	grid-area: main;
 }
 
-.site aside {
+.site > aside {
 	grid-area: aside;
 }
 
-.site footer {
+.site > footer {
 	grid-area: footer;
 }
 
@@ -977,10 +977,15 @@ textarea {
 
 /* Footer
 --------------------------------------------- */
+:root {
+	--footer-color: rgb(23, 26, 29);
+}
+
 .site-footer {
 	display: flex;
 	height: 70px;
-	background-color: rgb(23, 26, 29);
+	box-shadow: 0 50vh 0 50vh var(--footer-color); /* extend to bottom */
+	background-color: var(--footer-color);
 	justify-content: center;
 	align-items: center;
 }
