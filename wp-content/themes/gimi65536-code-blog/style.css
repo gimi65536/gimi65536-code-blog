@@ -696,6 +696,7 @@ textarea {
 	position: sticky;
 	top: 0;
 	z-index: 726;
+	padding: 0 20px;
 }
 
 .site-header p {
@@ -760,7 +761,7 @@ textarea {
 .main-navigation li {
 	display: block;
 	position: relative;
-	width: 125px;
+	/* width: 125px; */
 }
 
 .main-navigation li:hover {
@@ -770,6 +771,7 @@ textarea {
 .main-navigation a {
 	text-decoration: none;
 	width: 100%;
+	padding: 0 20px;
 	/* verical center text */
 	display: flex;
 	justify-content: center;
@@ -780,6 +782,14 @@ textarea {
 	font-weight: bold;
 	color: rgb(40, 41, 46);
 	transition: all .4s;
+}
+
+.main-navigation li:nth-child(n+2) a::before {
+	content: "";
+	position: absolute;
+	border: 0.5px solid #ddd;
+	height: 1rem;
+	left: -1px;
 }
 
 .main-navigation a:hover {
@@ -868,8 +878,8 @@ textarea {
 .post .entry-header .entry-meta::after {
 	content: "";
 	flex: 1 1;
-	width: 30px;
-	border-bottom: 1px solid #aaa;
+	width: 50px;
+	border-bottom: 1px solid #ccc;
 	margin: auto 10px;
 }
 
@@ -923,20 +933,42 @@ textarea {
 
 /* Widgets
 --------------------------------------------- */
+:root {
+	--side-color: #f8f8f8;
+	--wtitle-btm: 1px;
+}
+
 .widget-area {
-	background-color: #e0e0e0;
-	padding: 0 30px;
+	background-color: var(--side-color);
+	padding: 10px 30px;
 }
 
 /* unused-r */
 .site::after {
 	content: "";
 	grid-area: unused-r;
-	background-color: #e0e0e0;
+	background-color: var(--side-color);
 }
 
 .widget {
 	margin: 0 0 1.5rem;
+}
+
+.widget-title {
+	font-size: 1.2rem;
+	font-weight: 600;
+	border-bottom: var(--wtitle-btm) solid #e0e0e0;
+}
+
+.widget-title::after {
+	content: "";
+	display: block;
+	height: var(--wtitle-btm);
+	width: 50px;
+	margin-top: 7px;
+	background-color: rgb(159, 211, 246);
+	position: relative;
+	top: 1px;
 }
 
 .widget select {
