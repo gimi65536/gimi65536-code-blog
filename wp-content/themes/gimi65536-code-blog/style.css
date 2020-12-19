@@ -696,7 +696,12 @@ textarea {
 
 /* header
 --------------------------------------------- */
+a.custom-logo-link {
+	display: block;
+}
+
 img.custom-logo {
+	display: block;
 	width: 100px;
 	height: 100px;
 }
