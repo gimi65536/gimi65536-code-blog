@@ -857,7 +857,7 @@ img.custom-logo {
 	flex: 1 0 50%;
 }
 
-/* Posts and pages
+/* Posts, pages, and w4pls
 --------------------------------------------- */
 .site-main {
 	padding: 0 30px;
@@ -871,6 +871,10 @@ img.custom-logo {
 .post,
 .page {
 	margin: 0 0 1.5rem;
+}
+
+article.w4pl {
+	margin: 1.5rem 0;
 }
 
 .post:first-child,
