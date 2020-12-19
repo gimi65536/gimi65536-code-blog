@@ -863,6 +863,11 @@ textarea {
 	margin: 0 0 1.5rem;
 }
 
+.post:first-child,
+.page:first-child{
+	margin-top: 1.5rem;
+}
+
 .post .entry-header {
 	display: flex;
 	flex-flow: column;
