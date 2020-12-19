@@ -696,6 +696,11 @@ textarea {
 
 /* header
 --------------------------------------------- */
+img.custom-logo {
+	width: 100px;
+	height: 100px;
+}
+
 .site-header {
 	background-color: #fff;
 	box-shadow: 0 3px 10px #77777730;
