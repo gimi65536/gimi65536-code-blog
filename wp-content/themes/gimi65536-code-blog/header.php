@@ -32,14 +32,14 @@
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php
+				$gimi65536_code_blog_description = get_bloginfo( 'description', 'display' );
+				if ( $gimi65536_code_blog_description || is_customize_preview() ) :
+					?>
+					<p class="site-description"><?php echo $gimi65536_code_blog_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<?php endif;
 			else :
 				the_custom_logo();
-			endif;
-			$gimi65536_code_blog_description = get_bloginfo( 'description', 'display' );
-			if ( $gimi65536_code_blog_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $gimi65536_code_blog_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
+			endif; ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
