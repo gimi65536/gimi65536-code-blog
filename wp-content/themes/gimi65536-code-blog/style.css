@@ -883,7 +883,8 @@ article.w4pl {
 }
 
 .post .entry-header,
-.page .entry-header {
+.page .entry-header,
+.w4pl .entry-header {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
