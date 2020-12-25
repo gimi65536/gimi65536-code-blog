@@ -882,7 +882,8 @@ article.w4pl {
 	margin-top: 1.5rem;
 }
 
-.post .entry-header {
+.post .entry-header,
+.page .entry-header {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
@@ -907,6 +908,11 @@ article.w4pl {
 	width: 50px;
 	border-bottom: 1px solid #ccc;
 	margin: auto 10px;
+}
+
+.entry-header h2 {
+	margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
 }
 
 .byline {
@@ -949,12 +955,100 @@ article.w4pl {
 
 /* Comments
 --------------------------------------------- */
+:root {
+	--ctitle-btm: 1px;
+	--avatar-size: 50px;
+	--avatar-margin: 5px;
+	--avatar-offset: calc(var(--avatar-size) + var(--avatar-margin));
+}
+
+.comments-title {
+	font-size: 1.2rem;
+}
+
+/* bar */
+.comments-title {
+	border-bottom: var(--ctitle-btm) solid #eee;
+}
+
+/* short colored bar */
+.comments-title::after {
+	content: "";
+	display: block;
+	height: var(--ctitle-btm);
+	width: 50px;
+	margin-top: 0.5em; /* adjust the distance */
+	background-color: rgb(159, 211, 246);
+	position: relative;
+	top: 1px; /* fit the border */
+}
+
+.comment-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/* enabled when list-style-type is not none */
+.comment-list li::marker {
+	font-size: 1.2rem;
+}
+
+/* bar */
+.comment {
+	padding-bottom: 1em;
+	border-bottom: var(--ctitle-btm) solid #eee;
+}
+
+.comment-author {
+	display: flex;
+	align-items: center;
+}
+
+.comment-author .avatar {
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	margin-right: var(--avatar-margin);
+}
+
+.comment-author a {
+	color: #191970;
+	text-decoration: none;
+}
+
+.comment-metadata {
+	margin-left: var(--avatar-offset);
+}
+
+.comment-metadata a {
+	color: #666;
+	font-size: 0.6rem;
+}
+
+.says {
+	display: none;
+}
+
+.comment-body > :not(.comment-meta) {
+	margin-left: var(--avatar-offset);
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
 .bypostauthor {
 	display: block;
+}
+
+.reply a {
+	color: #666;
+}
+
+/* Respond
+--------------------------------------------- */
+.comment-respond {
+	margin-top: 4rem;
 }
 
 /* Widgets
@@ -981,21 +1075,23 @@ article.w4pl {
 	margin: 0 0 1.5rem;
 }
 
+/* bar */
 .widget-title {
 	font-size: 1.2rem;
 	font-weight: 600;
 	border-bottom: var(--wtitle-btm) solid #e0e0e0;
 }
 
+/* short colored bar */
 .widget-title::after {
 	content: "";
 	display: block;
 	height: var(--wtitle-btm);
 	width: 50px;
-	margin-top: 7px;
+	margin-top: 7px; /* adjust the distance */
 	background-color: rgb(159, 211, 246);
 	position: relative;
-	top: 1px;
+	top: 1px; /* fit the border */
 }
 
 .widget select {

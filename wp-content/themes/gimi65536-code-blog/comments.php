@@ -29,20 +29,25 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 			<?php
 			$gimi65536_code_blog_comment_count = get_comments_number();
-			if ( '1' === $gimi65536_code_blog_comment_count ) {
+			/*if ( '1' === $gimi65536_code_blog_comment_count ) {
 				printf(
-					/* translators: 1: title. */
+					// translators: 1: title.
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'gimi65536-code-blog' ),
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
 			} else {
 				printf( 
-					/* translators: 1: comment count number, 2: title. */
+					// translators: 1: comment count number, 2: title.
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $gimi65536_code_blog_comment_count, 'comments title', 'gimi65536-code-blog' ) ),
 					number_format_i18n( $gimi65536_code_blog_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 					'<span>' . wp_kses_post( get_the_title() ) . '</span>'
 				);
-			}
+			}*/
+			printf( 
+				// translators: 1: comment count number, 2: title.
+				esc_html( _nx( '%1$s Comment', '%1$s Comments', $gimi65536_code_blog_comment_count, 'comments title', 'gimi65536-code-blog' ) ),
+				number_format_i18n( $gimi65536_code_blog_comment_count ) // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			);
 			?>
 		</h2><!-- .comments-title -->
 
