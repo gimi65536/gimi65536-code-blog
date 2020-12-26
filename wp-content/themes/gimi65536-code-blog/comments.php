@@ -76,11 +76,7 @@ if ( post_password_required() ) {
 
 	endif; // Check for have_comments().
 
-	comment_form(
-		array(
-			'format'	=> 'html5'
-		)
-	);
+	comment_form();
 	?>
 
 </div><!-- #comments -->

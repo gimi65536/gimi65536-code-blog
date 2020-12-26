@@ -684,6 +684,33 @@ textarea {
 	justify-content: space-between;
 }
 
+/* Respond form
+--------------------------------------------- */
+.comment-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.comment-notes,
+.comment-form-comment,
+.comment-form-cookies-consent,
+.form-submit {
+	width: 100%;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	width: 30%;
+}
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+	width: 100%;
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -1043,6 +1070,7 @@ article.w4pl {
 }
 
 .reply a {
+	font-size: 0.8rem;
 	color: #666;
 }
 
@@ -1050,6 +1078,25 @@ article.w4pl {
 --------------------------------------------- */
 .comment-respond {
 	margin-top: 4rem;
+	margin-bottom: 1.5rem;
+}
+
+.comment-form {
+	font-size: 0.8rem;
+} 
+
+.comment-form textarea,
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+	background-color: #fcfcfc;
+}
+
+.comment-respond .submit {
+	color: white;
+	background-color: #28292e;
+	font-size: 0.8rem;
+	height: 2.4rem;
 }
 
 /* Widgets
