@@ -1076,13 +1076,17 @@ article.w4pl {
 
 /* Respond
 --------------------------------------------- */
+:root {
+	--respond-font-size: 0.8rem;
+}
+
 .comment-respond {
 	margin-top: 4rem;
 	margin-bottom: 1.5rem;
 }
 
 .comment-form {
-	font-size: 0.8rem;
+	font-size: var(--respond-font-size);
 } 
 
 .comment-form textarea,
@@ -1095,7 +1099,7 @@ article.w4pl {
 .comment-respond .submit {
 	color: white;
 	background-color: #28292e;
-	font-size: 0.8rem;
+	font-size: var(--respond-font-size);
 	height: 2.4rem;
 }
 
@@ -1164,6 +1168,7 @@ article.w4pl {
 .site-info {
 	text-align: center;
 	color: white;
+	font-size: 0.9rem;
 }
 
 .site-footer a {
