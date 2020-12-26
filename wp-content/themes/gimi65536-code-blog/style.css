@@ -957,6 +957,12 @@ article.w4pl {
 	margin: 1.5rem 0 0;
 }
 
+.page-content p,
+.entry-content p,
+.entry-summary p {
+	line-height: 1.8;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5rem;
