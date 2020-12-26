@@ -572,9 +572,9 @@ input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
+	border-radius: 5px;
+	background: #28292e;
+	color: rgba(255, 255, 255, 0.8);
 	line-height: 1;
 	padding: 0.6rem 1rem 0.4rem;
 }
@@ -821,7 +821,7 @@ img.custom-logo {
 	align-items: center;
 	text-align: center;
 	/* font size */
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: bold;
 	color: rgb(40, 41, 46);
 	transition: all .4s;
@@ -1154,6 +1154,19 @@ article.w4pl {
 
 .widget select {
 	max-width: 100%;
+}
+
+.widget ul {
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.widget a {
+	text-decoration: none;
+}
+
+.search-submit {
+	font-size: 0.9rem;
 }
 
 /* Footer
