@@ -77,3 +77,6 @@ Thumbs.db
 !wp-content/themes/gimi65536-code-blog
 wp-content/themes/gimi65536-code-blog/dist
 wp-content/themes/gimi65536-code-blog/dev-example
+
+# track these plugins
+!wp-content/plugins/gimi65536-tools
