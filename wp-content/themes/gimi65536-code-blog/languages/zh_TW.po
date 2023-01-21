@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
-"PO-Revision-Date: 2023-01-15 05:10+0000\n"
+"PO-Revision-Date: 2023-01-21 05:54+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: _s\n"
 "Language: zh_TW\n"
@@ -54,12 +54,12 @@ msgstr[0] ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #: template-parts/content.php:40
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
+msgstr "繼續閱讀<span class=\"screen-reader-text\">《%s》</span>"
 
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/template-tags.php:100 template-parts/content-page.php:39
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr "編輯文章<span class=\"screen-reader-text\">「%s」</span>"
+msgstr "編輯文章<span class=\"screen-reader-text\">《%s》</span>"
 
 #. Description of the theme
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 #. translators: %s: post title
 #: inc/template-tags.php:83
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr "留言<span class=\"screen-reader-text\">於「%s」</span>"
+msgstr "留言<span class=\"screen-reader-text\">於《%s》</span>"
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:70

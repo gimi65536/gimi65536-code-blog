@@ -59,8 +59,9 @@ Thumbs.db
 *.tar
 *.zip
 
-# ignore po~ files
+# ignore temp po~ pot~ files
 *.po~
+*.pot~
 
 # -------------------------
 # BEGIN Whitelisted Files

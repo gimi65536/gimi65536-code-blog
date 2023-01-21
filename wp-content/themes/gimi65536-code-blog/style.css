@@ -1034,11 +1034,18 @@ article.w4pl {
 	margin: 0 0 1.5rem;
 }
 
+.more-link {
+	display: block;
+	color: inherit;
+	text-align: center;
+}
+
 .post .entry-footer {
 	display: flex;
 	/* justify-content: flex-end; */
 	flex-flow: column;
 	align-items: end;
+	margin-top: 1rem;
 }
 
 .post .entry-footer a {
@@ -1097,7 +1104,7 @@ article.w4pl {
 }
 
 /* bar */
-.comment {
+.comments-area .comment { /* To prevent name collision, restrict .comment under .comments-area */
 	padding-bottom: 1em;
 	border-bottom: var(--ctitle-btm) solid #eee;
 }
