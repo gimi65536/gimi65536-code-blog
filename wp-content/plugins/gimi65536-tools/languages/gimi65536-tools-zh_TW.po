@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: gimi65536's Tools\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 10:15+0000\n"
-"PO-Revision-Date: 2023-01-21 11:58+0000\n"
+"PO-Revision-Date: 2023-02-08 10:27+0000\n"
 "Last-Translator: \n"
 "Language-Team: 繁體中文\n"
 "Language: zh_TW\n"
@@ -19,11 +19,17 @@ msgstr ""
 msgid "A custom plugin used for gimi65536's wordpress blog"
 msgstr "用在gimi65536的WordPress部落格的定製化外掛"
 
-#: main.php:30
+#: main.php:103
 msgid "Execution error!"
 msgstr "執行錯誤！"
 
+#. # Section name
+#: main.php:24
+msgid "General Settings"
+msgstr "一般設定"
+
 #. Name of the plugin
+#: main.php:65
 msgid "gimi65536's Tools"
 msgstr "gimi65536的工具箱"
 
@@ -32,15 +38,24 @@ msgstr "gimi65536的工具箱"
 msgid "https://blog.gimi65536.xyz/"
 msgstr ""
 
-#: main.php:27
+#: main.php:100
 msgid "Results will be shown here..."
 msgstr "此處顯示結果……"
 
-#: main.php:26
+#: main.php:99
 msgid "Submit"
 msgstr "提交"
 
-#: main.php:94
+#. # Field name
+#: main.php:30
+msgid "Tool API Address"
+msgstr "工具API網址"
+
+#: main.php:57
+msgid "Update"
+msgstr "更新"
+
+#: main.php:167
 msgid "Validation failed!"
 msgstr "驗證失敗！"
 

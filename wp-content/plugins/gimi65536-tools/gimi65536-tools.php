@@ -18,4 +18,6 @@ function g6tools_load_textdomain(){
 }
 add_action('init', 'g6tools_load_textdomain');
 
-require_once('main.php');
+$rootdir = dirname(__FILE__);
+require_once($rootdir . '/options.php');
+require_once($rootdir . '/main.php');

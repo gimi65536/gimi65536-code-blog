@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gimi65536's Tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-21 11:53+0000\n"
+"POT-Creation-Date: 2023-02-08 10:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,11 +20,17 @@ msgstr ""
 msgid "A custom plugin used for gimi65536's wordpress blog"
 msgstr ""
 
-#: main.php:30
+#: main.php:103
 msgid "Execution error!"
 msgstr ""
 
+#. # Section name
+#: main.php:24
+msgid "General Settings"
+msgstr ""
+
 #. Name of the plugin
+#: main.php:65
 msgid "gimi65536's Tools"
 msgstr ""
 
@@ -33,15 +39,24 @@ msgstr ""
 msgid "https://blog.gimi65536.xyz/"
 msgstr ""
 
-#: main.php:27
+#: main.php:100
 msgid "Results will be shown here..."
 msgstr ""
 
-#: main.php:26
+#: main.php:99
 msgid "Submit"
 msgstr ""
 
-#: main.php:94
+#. # Field name
+#: main.php:30
+msgid "Tool API Address"
+msgstr ""
+
+#: main.php:57
+msgid "Update"
+msgstr ""
+
+#: main.php:167
 msgid "Validation failed!"
 msgstr ""
 

@@ -1,4 +1,6 @@
 <?php
+
+// Settings for shortcode
 function g6_validate_toolname($name){
 	return preg_match('/^[\w_\$]+$/', $name) === 1;
 }
@@ -98,13 +100,13 @@ function g6tools_invoke(){
 	unset($_POST['nonce']);
 	unset($_POST['tool']);
 
-	$curl = curl_init("http://tool/$tool");
+	$address = get_option('g6tools_toolapi_address');
+	$curl = curl_init($address . $tool);
 	curl_setopt($curl, CURLOPT_POST, true);
 	curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($_POST));
-	$result = curl_exec($curl);
+	curl_exec($curl);
 	curl_close($curl);
 
-	echo $result;
 	wp_die();
 }
 add_action("wp_ajax_gimi65536_tool_invoke", "g6tools_invoke");
