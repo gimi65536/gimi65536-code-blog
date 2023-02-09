@@ -36,14 +36,6 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 		wp_enqueue_script("g6tools-js-l10n");
 		wp_add_inline_script("g6tools-js-l10n", 'const g6tools_js_l10n = ' . json_encode($trans_js) . ';');
 	}
-	/* I solve the <br> problem by display:none, so it doesn't affect other shortcodes and we don't depend on other plugins e.g. Raw HTML. */
-	if(!wp_style_is("g6tools-g6form-content-eliminate-br")){
-		wp_register_style("g6tools-g6form-content-eliminate-br", '');
-		wp_enqueue_style("g6tools-g6form-content-eliminate-br");
-		wp_add_inline_style("g6tools-g6form-content-eliminate-br",
-			'.g6form-content br {display: none;} .g6form-content br.display-br {display: revert;}'
-		);
-	}
 
 	$script = <<<END
 	<form method="post" class="g6form g6form-$tool" id="$formid">

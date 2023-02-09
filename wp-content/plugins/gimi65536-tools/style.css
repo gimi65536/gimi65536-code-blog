@@ -1,0 +1,8 @@
+/* I solve the shortcode <br> problem by display:none, so it doesn't affect other shortcodes and we don't depend on other plugins e.g. Raw HTML. */
+.g6form-content br {
+    display: none;
+}
+
+.g6form-content br.display-br {
+    display: revert;
+}

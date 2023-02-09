@@ -18,6 +18,12 @@ function g6tools_load_textdomain(){
 }
 add_action('init', 'g6tools_load_textdomain');
 
+function g6tools_load_style(){
+	$plugin_url = plugin_dir_url(__FILE__);
+	wp_enqueue_style('g6tools-style', $plugin_url . 'style.css');
+}
+add_action('wp_enqueue_scripts', 'g6tools_load_style');
+
 $rootdir = dirname(__FILE__);
 require_once($rootdir . '/options.php');
 require_once($rootdir . '/main.php');
