@@ -42,7 +42,7 @@ function g6tools_general_section_callback() {
 function g6tools_toolapi_address_field_callback(){
 	$address = get_option('g6tools_toolapi_address');
 	?>
-	<input type="text" name="g6tools_toolapi_address" value="<?php echo isset( $address ) ? esc_attr( $address ) : 'http://tool'; ?>">
+	<input type="text" name="g6tools_toolapi_address" value="<?php echo isset( $address ) ? esc_attr( $address ) : 'http://tool/'; ?>">
 	<?php
 }
 
