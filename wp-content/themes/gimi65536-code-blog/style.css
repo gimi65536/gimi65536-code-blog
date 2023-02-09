@@ -1062,6 +1062,18 @@ article.w4pl {
 	margin: 0 3px;
 }*/
 
+/* ToCs
+--------------------------------------------- */
+/* Should be independent from what plugin we use to generate TOCs */
+.toc {
+	background-color: var(--side-color);
+	border-radius: 1rem;
+}
+
+.toc a {
+	text-decoration: none;
+}
+
 /* Comments
 --------------------------------------------- */
 :root {

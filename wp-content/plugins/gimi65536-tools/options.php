@@ -23,13 +23,13 @@ function g6tools_settings_init(){
 		'g6tools_general_section', # Section name
 		__("General Settings", 'gimi65536-tools'),
 		'g6tools_general_section_callback',
-		'general' # Page name
+		'g6tools_setting_page'
 	);
 	add_settings_field(
 		'g6tools_toolapi_address_field', # Field name
 		__('Tool API Address', 'gimi65536-tools'),
 		'g6tools_toolapi_address_field_callback',
-		'general',
+		'g6tools_setting_page',
 		'g6tools_general_section'
 	);
 }
@@ -53,7 +53,7 @@ function g6tools_options_page_html(){
 		<form action="options.php" method="post">
 			<?php
 			settings_fields('g6tools_general'); // import nonces
-			do_settings_sections('general');
+			do_settings_sections('g6tools_setting_page');
 			submit_button(__('Update', 'gimi65536-tools'));
 			?>
 		</form>
