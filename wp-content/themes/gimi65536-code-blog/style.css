@@ -1064,7 +1064,7 @@ article.w4pl {
 
 /* ToCs
 --------------------------------------------- */
-/* Should be independent from what plugin we use to generate TOCs */
+/* General settings (independent from what ToC plugins we use) */
 .toc {
 	background-color: var(--side-color);
 	border-radius: 1rem;
@@ -1072,6 +1072,24 @@ article.w4pl {
 
 .toc a {
 	text-decoration: none;
+}
+
+/* Specified to Ultimate Blocks */
+.ub_table-of-contents {
+	max-width: inherit !important;
+}
+
+.ub_table-of-contents-header-container {
+	padding: 1rem 2rem;
+}
+
+.ub_table-of-contents-header {
+	font-size: 1.05rem;
+}
+
+.ub_table-of-contents-extra-container {
+	padding: 0 2rem;
+	padding-bottom: 1rem;
 }
 
 /* Comments
