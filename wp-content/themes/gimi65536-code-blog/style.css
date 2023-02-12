@@ -995,6 +995,10 @@ article.w4pl {
 	display: flex;
 }
 
+h1.entry-title {
+	text-align: center;
+}
+
 .post .entry-header .entry-meta::before,
 .post .entry-header .entry-meta::after {
 	content: "";
