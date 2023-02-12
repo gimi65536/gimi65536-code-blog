@@ -1029,6 +1029,10 @@ article.w4pl {
 	line-height: 1.8;
 }
 
+.wp-block-code code {
+	white-space: pre;
+}
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5rem;
