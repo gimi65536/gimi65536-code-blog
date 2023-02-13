@@ -6,3 +6,7 @@
 .g6form-content br.display-br {
     display: revert;
 }
+
+.g6form-result pre {
+    border-radius: 0.5rem;
+}

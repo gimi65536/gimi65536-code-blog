@@ -57,7 +57,30 @@ function g6tools_options_page_html(){
 			submit_button(__('Update', 'gimi65536-tools'));
 			?>
 		</form>
+		<button id="g6tools-reload">Reload</button><output id="g6tools-reload-result"></output>
 	</div>
+	<script>
+		jQuery("#g6tools-reload").click(function(e){
+			jQuery("#g6tools-reload-result").text('');
+			form = new FormData();
+			form.append('action', 'gimi65536_tool_reload');
+			form.append('nonce', '<?php echo wp_create_nonce('g6tool_reload_tool_nonce'); ?>');
+			jQuery.ajax({
+				url: "<?php echo admin_url('admin-ajax.php'); ?>",
+				type: 'POST',
+				data: form,
+				contentType: false,
+				processData: false,
+				cache: false,
+				success: function(data){
+					jQuery("#g6tools-reload-result").text(data);
+				},
+				error: function(data){
+					jQuery("#g6tools-reload-result").text('Server Error.');
+				}
+			});
+		});
+	</script>
 	<?php
 }
 function g6tools_options_page(){

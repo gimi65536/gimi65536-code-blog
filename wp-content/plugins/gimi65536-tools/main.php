@@ -48,9 +48,9 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 		<input type="hidden" name="action" value="gimi65536_tool_invoke">
 		<input type="hidden" name="nonce" value="$nonce">
 		<input type="hidden" name="tool" value="$tool">
-		<div class="g6form-result g6form-result-$tool">
+		<output class="g6form-result g6form-result-$tool" aria-live="polite" role="log">
 			<pre id="g6form-result-$tool-$formid">$trans[here_show_results]</pre>
-		</div>
+		</output>
 	</form>
 	<script>
 		jQuery("#$formid").submit(function(e){
@@ -107,4 +107,21 @@ function g6tools_invoke(){
 }
 add_action("wp_ajax_gimi65536_tool_invoke", "g6tools_invoke");
 add_action("wp_ajax_nopriv_gimi65536_tool_invoke", "g6tools_invoke");
+
+function g6tools_reload(){
+	$nonce = $_POST['nonce'];
+	if(!wp_verify_nonce($nonce, "g6tool_reload_tool_nonce")){
+		echo __("Validation failed!", 'gimi65536-tools');
+		wp_die();
+	}
+
+	$address = get_option('g6tools_toolapi_address');
+	$curl = curl_init($address);
+	curl_setopt($curl, CURLOPT_POST, true);
+	curl_exec($curl);
+	curl_close($curl);
+
+	wp_die();
+}
+add_action("wp_ajax_gimi65536_tool_reload", "g6tools_reload");
 ?>
