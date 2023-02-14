@@ -10,12 +10,12 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 		return '';
 	}
 
-	$wporg_atts = shortcode_atts(
+	$atts = shortcode_atts(
 		array(
 			'tool' => '',
 		), $atts, $tag
 	);
-	$tool = $wporg_atts['tool'];
+	$tool = $atts['tool'];
 	if(!g6_validate_toolname($tool)){
 		return '';
 	}
@@ -36,6 +36,8 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 		wp_enqueue_script("g6tools-js-l10n");
 		wp_add_inline_script("g6tools-js-l10n", 'const g6tools_js_l10n = ' . json_encode($trans_js) . ';');
 	}
+
+	$content = do_shortcode($content);
 
 	$script = <<<END
 	<form method="post" class="g6form g6form-$tool" id="$formid">
@@ -110,7 +112,7 @@ add_action("wp_ajax_nopriv_gimi65536_tool_invoke", "g6tools_invoke");
 
 function g6tools_reload(){
 	$nonce = $_POST['nonce'];
-	if(!wp_verify_nonce($nonce, "g6tool_reload_tool_nonce")){
+	if(!current_user_can("update_plugins") || !wp_verify_nonce($nonce, "g6tool_reload_tool_nonce")){
 		echo __("Validation failed!", 'gimi65536-tools');
 		wp_die();
 	}

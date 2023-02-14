@@ -27,3 +27,4 @@ add_action('wp_enqueue_scripts', 'g6tools_load_style');
 $rootdir = dirname(__FILE__);
 require_once($rootdir . '/options.php');
 require_once($rootdir . '/main.php');
+require_once($rootdir . '/formfields.php');
