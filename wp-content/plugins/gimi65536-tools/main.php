@@ -70,10 +70,21 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 				processData: false,
 				cache: false,
 				success: function(data){
-					jQuery("#g6form-result-$tool-$formid").text(data);
+					// To fit any other thing in <pre> block
+					for(node of jQuery("#g6form-result-$tool-$formid").contents()){
+						if(node.nodeType == 3){
+							node.textContent = data;
+							break;
+						}
+					}
 				},
 				error: function(data){
-					jQuery("#g6form-result-$tool-$formid").text(g6tools_js_l10n['exe_error']);
+					for(node of jQuery("#g6form-result-$tool-$formid").contents()){
+						if(node.nodeType == 3){
+							node.textContent = g6tools_js_l10n['exe_error'];
+							break;
+						}
+					}
 				}
 			});
 		});
