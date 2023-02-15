@@ -64,7 +64,7 @@ function g6tools_options_page_html(){
 			jQuery("#g6tools-reload-result").text('');
 			form = new FormData();
 			form.append('action', 'gimi65536_tool_reload');
-			form.append('nonce', '<?php echo wp_create_nonce('g6tool_reload_tool_nonce'); ?>');
+			form.append('_ajax_nonce', '<?php echo wp_create_nonce('g6tool_reload_tool_nonce'); ?>');
 			jQuery.ajax({
 				url: "<?php echo admin_url('admin-ajax.php'); ?>",
 				type: 'POST',

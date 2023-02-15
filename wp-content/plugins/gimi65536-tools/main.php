@@ -48,7 +48,7 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 			<button type='submit'>$trans[submit]</button>
 		</div>
 		<input type="hidden" name="action" value="gimi65536_tool_invoke">
-		<input type="hidden" name="nonce" value="$nonce">
+		<input type="hidden" name="_ajax_nonce" value="$nonce">
 		<input type="hidden" name="tool" value="$tool">
 		<output class="g6form-result g6form-result-$tool" aria-live="polite" role="log">
 			<pre id="g6form-result-$tool-$formid">$trans[here_show_results]</pre>
@@ -62,7 +62,7 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 				url: "$ajaxurl",
 				type: 'POST',
 				/* application/x-www-form-urlencoded
-				data: ({action: "gimi65536_tool_invoke", nonce: "123", tool: "aa"}),
+				data: ({action: "gimi65536_tool_invoke", _ajax_nonce: "123", tool: "aa"}),
 				*/
 				/* multipart/form-data */
 				data: form,
@@ -99,14 +99,14 @@ function g6tools_shortcodes_init(){
 add_action('init', 'g6tools_shortcodes_init');
 
 function g6tools_invoke(){
-	$nonce = $_POST['nonce'];
+	$nonce = $_POST['_ajax_nonce'];
 	$tool = $_POST['tool'];
 	if(!wp_verify_nonce($nonce, "g6tool_nonce_$tool")){
 		echo __("Validation failed!", 'gimi65536-tools');
 		wp_die();
 	}
 	unset($_POST['action']);
-	unset($_POST['nonce']);
+	unset($_POST['_ajax_nonce']);
 	unset($_POST['tool']);
 
 	$address = get_option('g6tools_toolapi_address');
@@ -122,7 +122,7 @@ add_action("wp_ajax_gimi65536_tool_invoke", "g6tools_invoke");
 add_action("wp_ajax_nopriv_gimi65536_tool_invoke", "g6tools_invoke");
 
 function g6tools_reload(){
-	$nonce = $_POST['nonce'];
+	$nonce = $_POST['_ajax_nonce'];
 	if(!current_user_can("update_plugins") || !wp_verify_nonce($nonce, "g6tool_reload_tool_nonce")){
 		echo __("Validation failed!", 'gimi65536-tools');
 		wp_die();
