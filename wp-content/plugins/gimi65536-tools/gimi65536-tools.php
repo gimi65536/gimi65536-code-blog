@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       	 gimi65536's Tools
  * Plugin URI:           https://blog.gimi65536.xyz/
- * Description:       	 A custom plugin used for gimi65536's wordpress blog
+ * Description:       	 A custom plugin used for gimi65536's wordpress blog to invoke my tool API
  * Version:           	 0.0.1
  * Requires at least:    6.0.0
  * Requires PHP:         7.4

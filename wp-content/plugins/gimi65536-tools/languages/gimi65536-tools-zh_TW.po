@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: gimi65536's Tools\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 10:15+0000\n"
-"PO-Revision-Date: 2023-02-08 10:27+0000\n"
+"PO-Revision-Date: 2023-02-15 11:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: 繁體中文\n"
 "Language: zh_TW\n"
@@ -16,46 +16,51 @@ msgstr ""
 "X-Domain: gimi65536-tools"
 
 #. Description of the plugin
-msgid "A custom plugin used for gimi65536's wordpress blog"
-msgstr "用在gimi65536的WordPress部落格的定製化外掛"
+msgid ""
+"A custom plugin used for gimi65536's wordpress blog to invoke my tool API"
+msgstr "在gimi65536的WordPress部落格用於呼叫工具API的定製化外掛"
 
-#: main.php:103
+#: main.php:32
 msgid "Execution error!"
 msgstr "執行錯誤！"
 
 #. # Section name
-#: main.php:24
+#: options.php:25
 msgid "General Settings"
 msgstr "一般設定"
 
 #. Name of the plugin
-#: main.php:65
 msgid "gimi65536's Tools"
 msgstr "gimi65536的工具箱"
+
+#. # Parent slug
+#: options.php:92 options.php:100
+msgid "gimi65536's Tools: General Settings"
+msgstr "gimi65536的工具箱：一般設定"
 
 #. URI of the plugin
 #. Author URI of the plugin
 msgid "https://blog.gimi65536.xyz/"
 msgstr ""
 
-#: main.php:100
+#: main.php:29
 msgid "Results will be shown here..."
 msgstr "此處顯示結果……"
 
-#: main.php:99
+#: main.php:28
 msgid "Submit"
 msgstr "提交"
 
 #. # Field name
-#: main.php:30
+#: options.php:31
 msgid "Tool API Address"
 msgstr "工具API網址"
 
-#: main.php:57
+#: options.php:61
 msgid "Update"
 msgstr "更新"
 
-#: main.php:167
+#: main.php:106 main.php:128
 msgid "Validation failed!"
 msgstr "驗證失敗！"
 

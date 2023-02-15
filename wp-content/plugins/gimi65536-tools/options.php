@@ -19,17 +19,18 @@ function g6tools_settings_init(){
 		'default' => 'http://tool/',
 		'sanitize_callback' => 'g6tools_sanitize_toolapi_address'
 	));
+	// g6tools_setting_general_page
 	add_settings_section(
 		'g6tools_general_section', # Section name
 		__("General Settings", 'gimi65536-tools'),
 		'g6tools_general_section_callback',
-		'g6tools_setting_page'
+		'g6tools_setting_general_page'
 	);
 	add_settings_field(
 		'g6tools_toolapi_address_field', # Field name
 		__('Tool API Address', 'gimi65536-tools'),
 		'g6tools_toolapi_address_field_callback',
-		'g6tools_setting_page',
+		'g6tools_setting_general_page',
 		'g6tools_general_section'
 	);
 }
@@ -46,14 +47,17 @@ function g6tools_toolapi_address_field_callback(){
 	<?php
 }
 
-function g6tools_options_page_html(){
+function g6tools_options_general_page_html(){
+	if(!current_user_can('manage_options')){
+		return;
+	}
 	?>
 	<div class="wrap">
 		<h1><?php echo esc_html(get_admin_page_title()); ?></h1>
 		<form action="options.php" method="post">
 			<?php
 			settings_fields('g6tools_general'); // import nonces
-			do_settings_sections('g6tools_setting_page');
+			do_settings_sections('g6tools_setting_general_page');
 			submit_button(__('Update', 'gimi65536-tools'));
 			?>
 		</form>
@@ -85,12 +89,28 @@ function g6tools_options_page_html(){
 }
 function g6tools_options_page(){
 	add_menu_page(
-		__("gimi65536's Tools", 'gimi65536-tools'), # Settings page title
+		__("gimi65536's Tools: General Settings", 'gimi65536-tools'), # Settings page title
 		"g6tools", # Name shown in the side bar
 		'manage_options',
-		'gimi65536-tools',
-		'g6tools_options_page_html'
+		'gimi65536-tools', # Slug
+		'g6tools_options_general_page_html'
 	);
+	add_submenu_page(
+		'gimi65536-tools', # Parent slug
+		__("gimi65536's Tools: General Settings", 'gimi65536-tools'), # Settings page title
+		__("General"), # Name shown in the side bar
+		'manage_options',
+		'gimi65536-tools', # Same to the parent: The default submenu of the parent
+		'g6tools_options_general_page_html'
+	);
+	/*add_submenu_page(
+		'gimi65536-tools', # Parent slug
+		__("gimi65536's Tools: Snippet", 'gimi65536-tools'), # Settings page title
+		'Snippet',
+		'manage_options',
+		'gimi65536-tools-snippet',
+		'g6tools_options_general_page_html'
+	);*/
 }
 add_action('admin_menu', 'g6tools_options_page');
 ?>

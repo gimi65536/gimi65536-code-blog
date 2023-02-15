@@ -5,7 +5,7 @@ function g6_validate_toolname($name){
 	return preg_match('/^[\w_\$]+$/', $name) === 1;
 }
 
-function g6form_shortcode($atts = [], $content = null, $tag = ''){
+function g6form_shortcode($atts = [], $content = null){
 	if(is_null($content)){
 		return '';
 	}
@@ -13,7 +13,7 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 	$atts = shortcode_atts(
 		array(
 			'tool' => '',
-		), $atts, $tag
+		), $atts
 	);
 	$tool = $atts['tool'];
 	if(!g6_validate_toolname($tool)){
@@ -95,6 +95,7 @@ function g6form_shortcode($atts = [], $content = null, $tag = ''){
 
 function g6tools_shortcodes_init(){
 	add_shortcode('g6form', 'g6form_shortcode');
+	add_shortcode('g6tool_form', 'g6form_shortcode'); # For consistency
 }
 add_action('init', 'g6tools_shortcodes_init');
 

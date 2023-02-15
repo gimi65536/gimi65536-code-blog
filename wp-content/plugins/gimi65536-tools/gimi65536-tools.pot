@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gimi65536's Tools\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-08 10:27+0000\n"
+"POT-Creation-Date: 2023-02-15 11:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -17,21 +17,26 @@ msgstr ""
 "X-Domain: gimi65536-tools"
 
 #. Description of the plugin
-msgid "A custom plugin used for gimi65536's wordpress blog"
+msgid ""
+"A custom plugin used for gimi65536's wordpress blog to invoke my tool API"
 msgstr ""
 
-#: main.php:103
+#: main.php:32
 msgid "Execution error!"
 msgstr ""
 
 #. # Section name
-#: main.php:24
+#: options.php:25
 msgid "General Settings"
 msgstr ""
 
 #. Name of the plugin
-#: main.php:65
 msgid "gimi65536's Tools"
+msgstr ""
+
+#. # Parent slug
+#: options.php:92 options.php:100
+msgid "gimi65536's Tools: General Settings"
 msgstr ""
 
 #. URI of the plugin
@@ -39,24 +44,24 @@ msgstr ""
 msgid "https://blog.gimi65536.xyz/"
 msgstr ""
 
-#: main.php:100
+#: main.php:29
 msgid "Results will be shown here..."
 msgstr ""
 
-#: main.php:99
+#: main.php:28
 msgid "Submit"
 msgstr ""
 
 #. # Field name
-#: main.php:30
+#: options.php:31
 msgid "Tool API Address"
 msgstr ""
 
-#: main.php:57
+#: options.php:61
 msgid "Update"
 msgstr ""
 
-#: main.php:167
+#: main.php:106 main.php:128
 msgid "Validation failed!"
 msgstr ""
 
