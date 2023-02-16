@@ -1,6 +1,7 @@
 /* I solve the shortcode <br> problem by display:none, so it doesn't affect other shortcodes and we don't depend on other plugins e.g. Raw HTML. */
 .g6form-content {
     margin-bottom: 1rem;
+    overflow-x: auto;
 }
 
 .g6form-content br.display-br {

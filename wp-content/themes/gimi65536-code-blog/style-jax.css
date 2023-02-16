@@ -3,7 +3,7 @@ mjx-container[display="true"] + br {
 	display: none;
 }
 
-mjx-container {
-	/*overflow-x: auto;
-	overflow-y: visible;*/
+/* To solve the width problem caused by MathJax */
+.entry-content > * {
+	overflow-x: auto;
 }
