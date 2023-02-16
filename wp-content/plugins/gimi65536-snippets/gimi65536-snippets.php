@@ -74,7 +74,7 @@ function g6snippets_posts_columns($columns){
 function g6snippets_posts_custom_column($column_name, $post_ID){
 	if($column_name == 'shortcode'){
 		echo <<<END
-		<input value="[postlist id=$post_ID]" type="text" size="20" onfocus="this.select();" onclick="this.select();" readonly="readonly" />
+		<input value="[g6snippet id=$post_ID]" type="text" size="20" onfocus="this.select();" onclick="this.select();" readonly>
 		END;
 	}
 }
