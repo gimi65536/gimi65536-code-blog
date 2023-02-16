@@ -1,0 +1,24 @@
+/* Specified to Ultimate Blocks */
+
+/* ToC */
+.ub_table-of-contents {
+	max-width: inherit !important;
+}
+
+.ub_table-of-contents-header-container {
+	padding: 1rem 2rem;
+}
+
+.ub_table-of-contents-header {
+	font-size: 1.05rem;
+}
+
+.ub_table-of-contents-extra-container {
+	padding: 0 2rem;
+	padding-bottom: 1rem;
+}
+
+/* Tabbed */
+.wp-block-ub-tabbed-content-tab-content-wrap {
+	overflow-x: auto;
+}

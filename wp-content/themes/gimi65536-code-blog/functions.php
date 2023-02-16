@@ -154,6 +154,7 @@ function gimi65536_code_blog_scripts() {
 	wp_enqueue_style( 'gimi65536-code-blog-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'gimi65536-code-blog-style', 'rtl', 'replace' );
 	wp_enqueue_style( 'gimi65536-code-blog-style-mathjax', get_stylesheet_directory_uri() . '/style-jax.css', array('gimi65536-code-blog-style'), _S_VERSION );
+	wp_enqueue_style( 'gimi65536-code-blog-style-ultimate', get_stylesheet_directory_uri() . '/style-ub.css', array('gimi65536-code-blog-style'), _S_VERSION );
 
 	wp_enqueue_script( 'gimi65536-code-blog-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
