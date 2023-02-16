@@ -81,3 +81,4 @@ wp-content/themes/gimi65536-code-blog/dev-example
 
 # track these plugins
 !wp-content/plugins/gimi65536-tools
+!wp-content/plugins/gimi65536-snippets

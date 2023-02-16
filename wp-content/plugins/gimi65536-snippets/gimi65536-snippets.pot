@@ -1,0 +1,152 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: gimi65536's Snippets\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-16 04:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.3; wp-6.1.1\n"
+"X-Domain: gimi65536-snippets"
+
+#. Description of the plugin
+msgid ""
+"A custom plugin used for gimi65536's wordpress blog to store snippets in "
+"shortcodes"
+msgstr ""
+
+#: gimi65536-snippets.php:52
+msgid "A link to a snippet."
+msgstr ""
+
+#: gimi65536-snippets.php:29
+msgid "Add New"
+msgstr ""
+
+#: gimi65536-snippets.php:30
+msgid "Add New Snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:38
+msgid "All Snippets"
+msgstr ""
+
+#: gimi65536-snippets.php:31
+msgid "Edit Snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:43
+msgid "Filter snippets list"
+msgstr ""
+
+#. Name of the plugin
+msgid "gimi65536's Snippets"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://blog.gimi65536.xyz/"
+msgstr ""
+
+#: gimi65536-snippets.php:41
+msgid "Insert into snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:32
+msgid "New Snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:36
+msgid "No snippets found"
+msgstr ""
+
+#: gimi65536-snippets.php:37
+msgid "No snippets found in Trash"
+msgstr ""
+
+#: gimi65536-snippets.php:35
+msgid "Search Snippets"
+msgstr ""
+
+#: gimi65536-snippets.php:68
+msgid "Shortcode"
+msgstr ""
+
+#: gimi65536-snippets.php:28
+msgid "Snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:39
+msgid "Snippet Archives"
+msgstr ""
+
+#: gimi65536-snippets.php:40
+msgid "Snippet Attributes"
+msgstr ""
+
+#: gimi65536-snippets.php:101
+msgid "Snippet is not found."
+msgstr ""
+
+#: gimi65536-snippets.php:51
+msgid "Snippet Link"
+msgstr ""
+
+#: gimi65536-snippets.php:47
+msgid "Snippet published privately."
+msgstr ""
+
+#: gimi65536-snippets.php:46
+msgid "Snippet published."
+msgstr ""
+
+#: gimi65536-snippets.php:48
+msgid "Snippet reverted to draft."
+msgstr ""
+
+#: gimi65536-snippets.php:49
+msgid "Snippet scheduled."
+msgstr ""
+
+#: gimi65536-snippets.php:50
+msgid "Snippet updated."
+msgstr ""
+
+#: gimi65536-snippets.php:45
+msgid "Snippetlist"
+msgstr ""
+
+#: gimi65536-snippets.php:27
+msgid "Snippets"
+msgstr ""
+
+#: gimi65536-snippets.php:44
+msgid "Snippets list navigation"
+msgstr ""
+
+#: gimi65536-snippets.php:104
+msgid "The ID doesn't indicate a snippet."
+msgstr ""
+
+#: gimi65536-snippets.php:42
+msgid "Uploaded to this snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:33
+msgid "View Snippet"
+msgstr ""
+
+#: gimi65536-snippets.php:34
+msgid "View Snippets"
+msgstr ""
+
+#. Author of the plugin
+msgid "Wayne Zeng"
+msgstr ""
