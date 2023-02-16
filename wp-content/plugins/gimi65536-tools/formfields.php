@@ -11,10 +11,10 @@ function g6form_number_shortcode($atts = []){
 		), $atts
 	);
 	$name = $atts['name'];
-	$min = empty($atts['min']) ? '' : " min=\"{$atts['min']}\"";
-	$max = empty($atts['max']) ? '' : " max=\"{$atts['max']}\"";
-	$required = empty($atts['optional']) ? ' required=""' : '';
-	$value = empty($atts['value']) ? '' : " value=\"{$atts['value']}\"";
+	$min = $atts['min'] == '' ? '' : " min=\"{$atts['min']}\"";
+	$max = $atts['max'] == '' ? '' : " max=\"{$atts['max']}\"";
+	$required = $atts['optional'] == '' ? ' required=""' : '';
+	$value = $atts['value'] = '' ? '' : " value=\"{$atts['value']}\"";
 	return <<<END
 	<input name="$name" type="number"$min$max$required$value>
 	END;
