@@ -1257,6 +1257,16 @@ article.w4pl {
 	margin: 0 0 1.5rem;
 }
 
+/* For old-style search widget */
+.widget_search form {
+	display: flex;
+}
+
+/* For block-style search widget */
+.wp-block-search__inside-wrapper {
+	display: flex;
+}
+
 /* bar */
 .widget-title {
 	font-size: 1.2rem;
@@ -1303,21 +1313,21 @@ article.w4pl {
 	padding-left: 0;
 }
 
-.wp-block-search {
+/*.wp-block-search {
 	margin-left: -40px;
 	width: calc(100% + 40px);
-}
+}*/
 
 .wp-block-search__button {
 	min-width: fit-content;
 }
 
 /* Media query doesn't support calc(var(--main-width) - var(--side-width) - 1px) */
-@media screen and (max-width: 1159px) {
+/*@media screen and (max-width: 1159px) {
 	.wp-block-search__inside-wrapper {
 		display: block;
 	}
-}
+}*/
 
 /* Footer
 --------------------------------------------- */
