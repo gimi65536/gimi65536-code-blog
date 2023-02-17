@@ -344,6 +344,10 @@ textarea {
 /* Interactive
 	 ========================================================================== */
 
+:root {
+	--details-background-color: rgb(0 0 0 / 0.1);
+}
+
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -356,6 +360,14 @@ details {
  */
 summary {
 	display: list-item;
+}
+
+details {
+	margin-bottom: 1.5rem;
+}
+
+details[open] {
+	background-color: var(--details-background-color);
 }
 
 /* Misc
