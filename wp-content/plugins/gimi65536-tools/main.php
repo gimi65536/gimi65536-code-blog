@@ -57,6 +57,13 @@ function g6form_shortcode($atts = [], $content = null){
 	<script>
 		jQuery("#$formid").submit(function(e){
 			e.preventDefault();
+			// To fit any other thing in <pre> block
+			for(node of jQuery("#g6form-result-$tool-$formid").contents()){
+				if(node.nodeType == 3){
+					node.textContent = "......";
+					break;
+				}
+			}
 			let form = new FormData(document.getElementById('$formid'));
 			jQuery.ajax({
 				url: "$ajaxurl",
@@ -70,7 +77,6 @@ function g6form_shortcode($atts = [], $content = null){
 				processData: false,
 				cache: false,
 				success: function(data){
-					// To fit any other thing in <pre> block
 					for(node of jQuery("#g6form-result-$tool-$formid").contents()){
 						if(node.nodeType == 3){
 							node.textContent = data;
