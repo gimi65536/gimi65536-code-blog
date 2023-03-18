@@ -370,6 +370,10 @@ details[open] {
 	background-color: var(--details-background-color);
 }
 
+details[open].no-grey-details {
+	background-color: unset;
+}
+
 /* Misc
 	 ========================================================================== */
 
